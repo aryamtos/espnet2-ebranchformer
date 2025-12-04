@@ -14,13 +14,13 @@ SECONDS=0
 lang=pt # en de fr cy tt kab ca zh-TW it fa eu es ru tr nl eo zh-CN rw pt zh-HK cs pl uk
 
 # Custom CSV mode (optional) - defaults must be set BEFORE parse_options.sh
-csv_train=/store/amatos/pasta/projects/metadados_/train_teste.csv
-csv_dev=/store/amatos/pasta/projects/metadados_/dev_teste.csv
-csv_test=/store/amatos/pasta/projects/metadados_/teste.csv
+csv_train=/.../train_teste.csv
+csv_dev=/.../dev_teste.csv
+csv_test=/.../teste.csv
 wav_root=
-wav_root_train=/scratch/amatos/Mupe_train
-wav_root_dev=/scratch/amatos/Mupe_Val/validation_all_mupe
-wav_root_test=/scratch/amatos/Mupe_Test
+wav_root_train=/.../Mupe_train
+wav_root_dev=/.../Mupe_Val/validation_all_mupe
+wav_root_test=/.../Mupe_Test
 csv_delimiter='\t'
 audio_column=file_path
 text_column=normalized_text
