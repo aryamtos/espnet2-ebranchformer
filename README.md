@@ -5,7 +5,11 @@
 Install CMake extensions and Sox via package manager:
 
 ```bash
-sudo apt-get install cmake sox
+sudo apt-get install cmake
+```
+
+```bash
+sudo apt-get install sox
 ```
 
 ## 2. Get Source Code
