@@ -1,64 +1,62 @@
-# Configuração do Ambiente e Instalação
+# Environment Setup and Installation
 
-Este documento descreve os passos necessários para configurar o ambiente, instalar dependências e verificar a instalação.
+## 1. System Prerequisites
 
-## 1. Pré-requisitos do Sistema
-
-Instale as extensões CMake e o Sox via gerenciador de pacotes:
+Install CMake extensions and Sox via package manager:
 
 ```bash
 sudo apt-get install cmake sox
 ```
 
-## 2. Obter o Código Fonte
+## 2. Get Source Code
 
-Clone o repositório oficial do ESPnet:
+Clone the official ESPnet repository:
 
 ```bash
 git clone https://github.com/espnet/espnet
 ```
 
-## 3. Configuração do Ambiente
+## 3. Environment Setup
 
-Configure as variáveis de ambiente e o caminho do Python.
+Configure environment variables and Python path.
 
 ```bash
-# Ativar o ambiente Python
+# Activate Python environment
 . <espnet-root>/tools/activate_python.sh
 
-# Configurar PYTHONPATH
+# Set PYTHONPATH
 MAIN_ROOT=$PWD/../../..
 export PYTHONPATH="${MAIN_ROOT}:${PYTHONPATH}"
 ```
 
-Para verificar se o módulo `espnet2` foi encontrado corretamente:
+To verify if the `espnet2` module is found correctly:
 
 ```bash
 python3 -c "import espnet2; print('espnet2 found at', espnet2.__file__)"
 ```
 
-## 4. Instalação Principal
+## 4. Main Installation
 
-Compile e instale as ferramentas necessárias no diretório `tools`:
+Compile and install the necessary tools in the `tools` directory:
 
 ```bash
 cd <espnet-root>/tools
 make
 ```
 
-## 5. Instalação do Transducer (Opcional)
+## 5. Transducer Installation (Optional)
 
-Para instalar o suporte ao Warp Transducer com CUDA:
+To install Warp Transducer support with CUDA:
 
 ```bash
 cd <espnet-root>/tools
-cuda_root=<cuda-root>  # Exemplo: /usr/local/cuda
+cuda_root=<cuda-root>  # Example: /usr/local/cuda
 bash -c ". activate_python.sh; . ./setup_cuda_env.sh $cuda_root; ./installers/install_warp-transducer.sh"
 ```
 
-## 6. Verificação da Instalação
+## 6. Check Installation
 
-Execute o script de verificação para garantir que todas as dependências estão configuradas corretamente:
+Run the verification script to ensure all dependencies are configured correctly:
 
 ```bash
 cd <espnet-root>/tools
